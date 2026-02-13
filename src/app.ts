@@ -1,6 +1,8 @@
 import express, { Application, Request, Response } from "express";
 
 import { IndexRoutes } from "./app/Routes";
+import { globalErrorHandler } from "./app/Middleware/globalErrorHandler";
+import { notFound } from "./app/Middleware/notFound";
 
 
 
@@ -22,5 +24,8 @@ app.get('/', async (req: Request, res: Response) => {
     })
 });
 
-app.use()
+
+app.use(globalErrorHandler)
+app.use(notFound)
+
 export default app
