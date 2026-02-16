@@ -78,5 +78,7 @@ export const globalErrorHandler = (
     stack: envVars.NODE_ENV === "development" ? stack : undefined,
   };
 
+
+
   res.status(statusCode).json(errorResponse);
 };
