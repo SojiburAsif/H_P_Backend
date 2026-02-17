@@ -25,6 +25,14 @@ export const globalErrorHandler = (
 
   //Zod Error Patern
   /*
+
+
+
+
+
+
+
+  
      error.issues; 
     /* [
       {
